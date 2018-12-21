@@ -21,6 +21,10 @@ class StreamShow extends React.Component {
     this.buildPlayer();
   }
 
+  componentWillUnmount() {
+    this.player.destroy();
+  }
+
   renderStream({title, description}) {
     return (
       <div>
